@@ -9,7 +9,7 @@ in the locality intending to serve delicious food with events and their seasonal
 
 ----------
 
-```
+````
 We would be building the application with the following features
 
 - Listing of the local restaurants
@@ -24,10 +24,9 @@ As of now this Project is under a coursework for CS545 Software Engineering, but
 
 Thank you for your interest to be a part of this open source initiative.
 
-```
+````
 ----------
 
-```
 # About Team:
 
 We are a team of 7 developers working towards a CS545 project
