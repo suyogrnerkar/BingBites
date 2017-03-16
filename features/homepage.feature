@@ -3,7 +3,7 @@ Feature: Homepage for Bing Bites
   As a user 
   So that I can get an overview of the product, team members, social connect.
 
-Scenario: Goto HomePage
+Scenario: Go to HomePage
    Given I am on the home page
    And I click on the "BingBites"
    Then I should see the "BingBites" homepage
@@ -31,11 +31,11 @@ Scenario: Footer
 Scenario: Sign Up
    Given I am on the home page
    And I press the "Sign Up"
-   Then I should see "Redirected to the sign up page"
+   Then I should see "Redirected to the Sign Up page"
 
 Scenario: Sign In
    Given I am on the home page
    And I press the "Sign In"
-   Then I should see "Redirected to the sign In page"
+   Then I should see "Redirected to the Sign In page"
 
 
