@@ -25,6 +25,26 @@ As of now this Project is under a coursework for CS545 Software Engineering, but
 Thank you for your interest to be a part of this open source initiative.
 
 ````
+
+----------
+# Branching Strategy:
+
+Master: Production branch
+- Only feature to be released i.e final product goes to master
+
+Develop: Feature after development 
+- Checkout a new branch for every new feature to be developed
+- Pull requests for any feature goes to develop branch
+
+Feature: Branch specific to a feature
+- Created from a develop 
+- Whenever new feature is to be worked on, as like a homepage, create a new branch from develop 
+- The feature branch would be merged to develop and develop would then be merged to master before deployments
+
+Task/Story: Specific to an individual
+- If multiple people work on a feature, use feature as a base branch for collaboration.
+
+
 ----------
 
 # About Team:
@@ -42,3 +62,4 @@ on building a rails application for Listing of Food and Events.
 - Uddhav Mhatre
 
 ```
+
