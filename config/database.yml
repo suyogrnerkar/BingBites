@@ -30,6 +30,7 @@ test: &test
   database: db/test.sqlite3
 
 production:
+  database: c9.production
   <<: *default
 
 cucumber:

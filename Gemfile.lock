@@ -40,6 +40,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
+    awesome_print (1.7.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
@@ -214,6 +215,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
+  awesome_print
   byebug
   capybara
   coffee-rails (~> 4.1.0)
