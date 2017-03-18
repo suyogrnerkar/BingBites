@@ -40,6 +40,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
+    awesome_print (1.7.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
@@ -84,6 +85,8 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     gherkin (4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -214,12 +217,14 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
+  awesome_print
   byebug
   capybara
   coffee-rails (~> 4.1.0)
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
+  font-awesome-rails
   haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.0)
   jquery-rails
