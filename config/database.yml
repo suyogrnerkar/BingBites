@@ -10,8 +10,10 @@
 #   timeout: 5000
 
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
+  pool: 5
+  timeout: 5000
   username: <%=ENV['C9_USER']%>
   host: <%=ENV['IP']%>
 
@@ -29,6 +31,7 @@ test: &test
 
 production:
   <<: *default
+  adapter: postgresql
   database: c9.production
 
 cucumber:
