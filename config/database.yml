@@ -31,8 +31,6 @@ test: &test
 
 production:
   <<: *default
-  adapter: postgresql
-  database: c9.production
 
 cucumber:
   <<: *test
