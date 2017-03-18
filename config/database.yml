@@ -30,9 +30,8 @@ test: &test
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  adapter: postgresql
   database: c9.production
+  <<: *default
 
 cucumber:
   <<: *test

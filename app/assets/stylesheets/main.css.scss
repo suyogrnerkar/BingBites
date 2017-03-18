@@ -1,11 +1,5 @@
-@import url("font-awesome.min.css");
+@import "font-awesome";
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
-
-/*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 /* Reset */
 
@@ -2830,7 +2824,7 @@
 	}
 
 		.goto-next:before {
-			background-image: url("images/arrow.svg");
+			background-image: image-image-url("images/arrow.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -2938,7 +2932,7 @@
 		}
 
 		.spotlight:before {
-			background-image: url("images/overlay.png");
+			background-image: image-url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
@@ -3333,7 +3327,7 @@
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("banner.jpg");
+		background-image: image-url("banner.jpg");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3355,10 +3349,10 @@
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), url("images/overlay.png");
-			background-image: -webkit-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), url("images/overlay.png");
-			background-image: -ms-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), url("images/overlay.png");
-			background-image: linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), url("images/overlay.png");
+			background-image: -moz-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), image-url("images/overlay.png");
+			background-image: -webkit-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), image-url("images/overlay.png");
+			background-image: -ms-linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), image-url("images/overlay.png");
+			background-image: linear-gradient(top,  rgba(62, 70, 0, 0.38), rgb(123, 0, 0)), image-url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
