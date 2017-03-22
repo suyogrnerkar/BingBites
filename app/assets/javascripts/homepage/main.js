@@ -1,9 +1,3 @@
-/*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	skel.breakpoints({
@@ -18,6 +12,8 @@
 
 		var	$window = $(window),
 			$body = $('body');
+
+		$(".alert" ).fadeOut(4000);
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');

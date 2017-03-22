@@ -11,11 +11,10 @@
 // about supported directives.
 //
 //= require jquery.min
-//= require jquery.scrolly.min
-//= require jquery.dropotron.min
-//= require jquery.scrollex.min
-//= require skel.min
-//= require util.js		
-//= require main.js
-//= require jquery_ujs
+//= require homepage/jquery.dropotron.min
+//= require homepage/jquery.scrollex.min
+//= require homepage/skel.min
+//= require homepage/util.js
+//= require homepage/main.js
 //= require turbolinks
+//= require jquery_ujs

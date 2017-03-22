@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318203438) do
+ActiveRecord::Schema.define(version: 20170322024325) do
 
   create_table "eateries", force: :cascade do |t|
     t.string   "name"
@@ -23,8 +23,17 @@ ActiveRecord::Schema.define(version: 20170318203438) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "provider",   default: "", null: false
+    t.string   "uid",        default: "", null: false
+    t.string   "location"
+    t.string   "image_url"
+    t.string   "url"
   end
+
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
+  add_index "users", ["provider"], name: "index_users_on_provider"
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
 end

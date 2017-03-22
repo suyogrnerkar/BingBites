@@ -42,6 +42,18 @@
 		-webkit-text-size-adjust: none;
 	}
 
+// ----------------------- CUSTOM COMMON CSS -----------------------------
+
+.alert {
+	text-align: center;
+  z-index: 100;
+  position: absolute;
+  border-radius: 0px;
+	width: 100%;
+	line-height: 30px;
+	font-weight: 500;
+}
+
 /* Box Model */
 
 	*, *:before, *:after {
