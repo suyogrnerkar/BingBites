@@ -16,5 +16,14 @@
 //= require homepage/skel.min
 //= require homepage/util.js
 //= require homepage/main.js
+//= require homepage/jquery.scrolly.min
 //= require turbolinks
 //= require jquery_ujs
+//= require eateries/jquery.dcjqaccordion.2.7
+//= require eateries/jquery.nicescroll
+//= require eateries/common-scripts
+//= require eateries/jquery.scrollTo.min.js
+//= require eateries/jquery.sparkline.js
+//= require eateries/gritter/js/jquery.gritter.js
+//= require eateries/gritter-conf.js
+//= require eateries/eateries

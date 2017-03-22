@@ -3,7 +3,8 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bingbites
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application-homepage', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
@@ -24,7 +25,9 @@
                 - if current_user
                   = link_to 'Log Out', '/logout', class: 'button special twitter', method: :delete
                 - else
-                  = link_to 'Twitter', '/auth/twitter', class: 'button special twitter'
+                  = link_to '/auth/twitter', class: 'button special twitter' do
+                    Twitter
+                    %i.fa.fa-sign-in
               %li
                 %a.button.special{:href => "#"} Sign Up
         = yield

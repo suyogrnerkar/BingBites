@@ -3,14 +3,23 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Bingbites
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application-eateries', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     .clearfix
-    %body.landing
+    %body
       #page-wrapper
         - flash.each do |key, value|
           %div{:class => "alert alert-#{key}"}
             = value
         = yield
+  = javascript_include_tag "https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js"
+  = stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css"
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic3V5b2dybmVya2FyIiwiYSI6IkJjTWFNVjQifQ.umq3dIayAEU8Bk3PsoJftQ';
+var map = L.mapbox.map('map', 'mapbox.streets', { zoomControl: false }).setView([42.0987, -75.9180], 13);
+new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+
+</script>
