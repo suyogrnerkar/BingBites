@@ -5,37 +5,30 @@ Feature: Homepage for Bing Bites
 
 Scenario: Go to HomePage
    Given I am on the home page
-   And I click on the "BingBites"
-   Then I should see the "BingBites" homepage
+   When I click on the link
+   Then I should see the Welcome message
 
 
 Scenario: Product description
    Given I am on the home page
-   And I press the "product desc" 
-   Then I should see the "product info"
+   When I click on the product desc
+   Then I should see the product info
 
 Scenario: Team members
    Given I am on the home page
-   And I press the "team members"
-   Then I should see the "team members"
+   When I click on the "team members"
+   Then I should see the team members
 
 Scenario: Social Connect
    Given I am on the home page
-   And I press the "Social Websites" 
-   Then I should see "Redirected to social networking website"
-
-Scenario: Footer
-   Given I am on the home page 
-   Then I should see the "Contact Us" and "policies info message"
-
-Scenario: Sign Up
-   Given I am on the home page
-   And I press the "Sign Up"
-   Then I should see "Redirected to the Sign Up page"
-
-Scenario: Sign In
-   Given I am on the home page
-   And I press the "Sign In"
-   Then I should see "Redirected to the Sign In page"
+   When I click on the single sign up
+   Then I should goto homepage
 
 
+Scenario: Visiting the sign up page
+    Given I am on the home page
+    Then I should see the sign up button
+    
+Scenario: Visiting the sign in page
+    Given I am on the home page
+   Then I should see the twitter button
