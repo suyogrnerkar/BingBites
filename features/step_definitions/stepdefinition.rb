@@ -10,33 +10,28 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
     expect(page).to have_content("Welcome to BingBites")
     end
 
-    When(/^I click on the product desc$/) do
-    visit root_path
-    end
     
     Then (/^I should see the product info$/) do
-    expect(page).to have_content("amazing experience")
+    expect(page).to have_content("amazing experiences")
     end
     
-    When(/^I click on the "team members"$/) do
-    visit root_path
-    end
     
-    Then (/I should see the team members$/) do
+    Then (/I should see The Team$/) do
     expect(page).to have_content("The Team")
       end
-    
-    When(/^I click on the single sign up$/) do
-    visit root_path
-    end
+   
 
     Then(/^I should goto homepage$/) do
     expect(page).to have_content("Welcome to BingBites")
     end
     
     
-    Then(/^I should see the sign up button$/) do
+    Then(/^I should see the Sign Up button$/) do
     expect{ click_button "Sign Up" }
+    end
+    
+    Then(/^I should see the social connect$/) do
+    expect{ click_button "Social connect symbols" }
     end
     
     Then (/^I should see "([^"]*)" button/) do |name|

@@ -1,4 +1,4 @@
-Feature: Homepage for Bing Bites
+Feature: Homepage for BingBites
   
   As a user 
   So that I can get an overview of the product, team members, social connect.
@@ -11,24 +11,20 @@ Scenario: Go to HomePage
 
 Scenario: Product description
    Given I am on the home page
-   When I click on the product desc
    Then I should see the product info
 
 Scenario: Team members
    Given I am on the home page
-   When I click on the "team members"
-   Then I should see the team members
+   Then I should see The Team
 
 Scenario: Social Connect
    Given I am on the home page
-   When I click on the single sign up
-   Then I should goto homepage
+   Then I should see the social connect
 
-
-Scenario: Visiting the sign up page
+Scenario: Visiting the Sign Up page
     Given I am on the home page
-    Then I should see the sign up button
+    Then I should see the Sign Up button
     
-Scenario: Visiting the sign in page
+Scenario: Visiting the Sign In page
     Given I am on the home page
-   Then I should see the twitter button
+    Then I should see the twitter button
