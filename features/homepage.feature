@@ -5,9 +5,9 @@ Feature: Homepage for BingBites
 
 Scenario: Go to HomePage
    Given I am on the home page
-   When I click on the link
-   Then I should see the Welcome message
-
+   When I click on the BingBites
+   Then I should be on the home page
+   And I should see the Welcome message
 
 Scenario: Product description
    Given I am on the home page
@@ -20,10 +20,6 @@ Scenario: Team members
 Scenario: Social Connect
    Given I am on the home page
    Then I should see the social connect
-
-Scenario: Visiting the Sign Up page
-    Given I am on the home page
-    Then I should see the Sign Up button
     
 Scenario: Visiting the Sign In page
     Given I am on the home page

@@ -2,10 +2,10 @@ require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
-    When(/^I click on the link$/) do
-    visit root_path
+    When(/^I click on the BingBites$/) do
+    click_link('BingBites')
     end
-
+    
     Then(/^I should see the Welcome message$/) do
     expect(page).to have_content("Welcome to BingBites")
     end
