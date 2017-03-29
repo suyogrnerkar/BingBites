@@ -11,5 +11,5 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe EateriesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  pending ": No examples as of now for : #{__FILE__}"
 end
