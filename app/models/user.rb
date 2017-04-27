@@ -10,4 +10,18 @@ class User < ActiveRecord::Base
       user
     end
   end
+  def super_admin?
+    role_type 'SUPERADMIN'
+  end
+
+  def eatery_admin?
+    role_type 'EATERYADMIN'
+  end
+
+  private
+
+  def role_type(role_type)
+    return true if role.eql? role_type
+    false
+  end
 end

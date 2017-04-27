@@ -8,6 +8,20 @@
     %ul.nav.pull-right.top-menu
 
 = render 'sidebar'
-.map
-  #map
+
+- if @eateries.count == 0
+  .listingEateries
+    .row
+      %h1 There are no eateries available yet
+- else
+  .listingEateries
+    .row
+      - @eateries.each do |eatery|
+        .col-md-3
+          .tr
+            .td=eatery.name 
+            .td=eatery.address
+          = link_to "Show Details for #{eatery.name}", eatery_path(eatery)
+          / = image_tag ea.book_img.url(:book_index), class: "book"
+
 

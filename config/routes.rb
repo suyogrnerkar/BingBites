@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :eateries do
   end
+  resources :searches
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

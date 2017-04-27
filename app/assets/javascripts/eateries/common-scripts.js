@@ -93,13 +93,13 @@ var Script = function () {
     });
 
 
-//    tool tips
+// //    tool tips
 
-    $('.tooltips').tooltip();
+//     $('.tooltips').tooltip();
 
-//    popovers
+// //    popovers
 
-    $('.popovers').popover();
+//     $('.popovers').popover();
 
 
 

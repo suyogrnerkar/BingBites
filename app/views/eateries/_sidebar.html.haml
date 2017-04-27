@@ -8,68 +8,32 @@
         - if current_user.image_url
           = image_tag current_user.image_url, class: 'avatar img-circle', alt: current_user.name
       %h5.centered= current_user.name
+      
       %li.mt
-        %a.active{:href => "index.html"}
-          %i.fa.fa-dashboard
-          %span Mexican
       %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-desktop
-          %span American
-        %ul.sub
-          %li
-            %a{:href => "general.html"} General
-          %li
-            %a{:href => "buttons.html"} Buttons
-          %li
-            %a{:href => "panels.html"} Panels
-      %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-cogs
-          %span Indian
-        %ul.sub
-          %li
-            %a{:href => "calendar.html"} Calendar
-          %li
-            %a{:href => "gallery.html"} Gallery
-          %li
-            %a{:href => "todo_list.html"} Todo List
-      %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-book
-          %span Asian
-        %ul.sub
-          %li
-            %a{:href => "blank.html"} Blank Page
-          %li
-            %a{:href => "login.html"} Login
-          %li
-            %a{:href => "lock_screen.html"} Lock Screen
-      %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-tasks
-          %span Continental
-        %ul.sub
-          %li
-            %a{:href => "form_component.html"} Form Components
-      %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-th
-          %span Italian
-        %ul.sub
-          %li
-            %a{:href => "basic_table.html"} Basic Table
-          %li
-            %a{:href => "responsive_table.html"} Responsive Table
-      %li.sub-menu
-        %a{:href => "javascript:;"}
-          %i.fa.fa-bar-chart-o
-          %span Speciality of the Day
-        %ul.sub
-          %li
-            %a{:href => "morris.html"} Morris
-          %li
-            %a{:href => "chartjs.html"} Chartjs
+        = link_to eateries_path, |
+          class: "#{'active' unless params[:category] }"  do
+          %i.fa.fa-eercast
+          List All
+
+      - Category.all.each do |cat|
+        %li.sub-menu
+          = link_to eateries_path(category: cat.name), |
+            class: "#{'active' if params[:category] == cat.name }" do
+            %i.fa{ class: "fa-#{FA_ICO_MAP[cat.name]}" }
+            = cat.name
+
+      - if current_user.super_admin?
+        %li.sub-menu
+          %a{:href => "javascript:;"}
+            %i.fa.fa-user-secret
+            %span ADMIN PANEL
+          %ul.sub
+            %li
+              = link_to 'Create Eatery', new_eatery_path
+            %li
+              = link_to 'Edit Eateries', new_eatery_path
+
       %li.sub-menu
         = link_to logout_path, class: 'logout', method: :delete do
           LOG OUT &emsp;
