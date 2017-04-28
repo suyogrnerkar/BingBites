@@ -7,6 +7,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'omniauth-twitter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'paperclip', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

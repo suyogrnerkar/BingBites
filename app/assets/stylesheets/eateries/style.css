@@ -417,7 +417,8 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    width: 210px;
+    text-align: center;
+    padding: 5px;
     /*background: rgba(14, 14, 14, 0.25);*/
 }
 

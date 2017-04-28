@@ -1,11 +1,9 @@
 class AddAttachmentEateryImgToEateries < ActiveRecord::Migration
-  def self.up
-    # change_table :eateries do |t|
-    #   t.attachment :eatery_img
-    # end
+  def up
+    add_attachment :eateries, :eatery_img
   end
 
   def self.down
-    # remove_attachment :eateries, :eatery_img
+    remove_attachment :eateries, :eatery_img
   end
 end

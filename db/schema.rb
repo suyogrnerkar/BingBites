@@ -22,9 +22,13 @@ ActiveRecord::Schema.define(version: 20170427202437) do
   create_table "eateries", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "category_id"
+    t.string   "eatery_img_file_name"
+    t.string   "eatery_img_content_type"
+    t.integer  "eatery_img_file_size"
+    t.datetime "eatery_img_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

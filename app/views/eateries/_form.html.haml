@@ -7,9 +7,14 @@
       %ul
         - @eatery.errors.full_messages.each do |message|
           %li= message
-
-  = f.file_field :eatery_img
-  = f.select(:category_id, options_for_select(@categories), include_blank: "Select a category")
+  .field
+    = f.label :image
+    %br/
+    = f.file_field :eatery_img
+  .field
+    = f.label :category
+    %br/
+    = f.select(:category_id, options_for_select(@categories), include_blank: "Select a category")
   .field
     = f.label :name
     %br/

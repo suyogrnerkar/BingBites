@@ -52,7 +52,7 @@ class EateriesController < ApplicationController
   private
   
   def eatery_params 
-    params.require(:eatery).permit(:name, :address, :category_id) 
+    params.require(:eatery).permit(:name, :address, :category_id, :eatery_img) 
   end
 
   def find_eatery
