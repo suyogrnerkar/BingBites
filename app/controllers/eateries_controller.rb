@@ -23,7 +23,7 @@ class EateriesController < ApplicationController
     @eatery = Eatery.new(eatery_params)
     respond_to do |format|
       if @eatery.save
-        format.html { redirect_to @eatery, notice: 'eatery was successfully created.' }
+        format.html { redirect_to root_path, notice: 'eatery was successfully created.' }
         format.json { render :show, status: :created, location: @eatery }
       else
         format.html { render :new }

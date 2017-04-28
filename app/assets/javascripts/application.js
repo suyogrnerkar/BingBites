@@ -21,9 +21,9 @@
 //= require jquery_ujs
 //= require eateries/jquery.dcjqaccordion.2.7
 //= require eateries/jquery.nicescroll
-//= require eateries/common-scripts
 //= require eateries/jquery.scrollTo.min.js
 //= require eateries/jquery.sparkline.js
 //= require eateries/gritter/js/jquery.gritter.js
 //= require eateries/gritter-conf.js
 //= require eateries/eateries
+//= require eateries/common-scripts

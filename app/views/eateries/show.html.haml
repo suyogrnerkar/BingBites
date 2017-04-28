@@ -12,6 +12,6 @@
   #map
 = link_to 'Edit', edit_eatery_path(@eatery)
 |
-= link_to 'Back', eateries_path
+= link_to 'Back', root_path, method: :get
 |
 = link_to 'Delete', eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"}
