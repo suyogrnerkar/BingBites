@@ -419,6 +419,7 @@ ul.sidebar-menu li a.active i {
 .black-bg {
     text-align: center;
     padding: 5px;
+    padding-top: 10px;
     /*background: rgba(14, 14, 14, 0.25);*/
 }
 

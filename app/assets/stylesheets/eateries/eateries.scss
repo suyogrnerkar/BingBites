@@ -5,10 +5,15 @@
   width: 60px;
 }
 
+.logout {
+  margin-top: 30px;
+}
+
 .navbar-brand {
   font-weight: 800;
   line-height: 28px;
   color: #b5b5b5;
+  margin: 0px 42px 0px 42px;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -23,6 +28,11 @@
   bottom:0;
   width:70%;
   height: 70%;
+}
+
+.nothingFound {
+  text-align: center;
+  margin: 200px;  
 }
 
 .listingEateries {

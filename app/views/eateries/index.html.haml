@@ -1,6 +1,4 @@
 %header.header.black-bg
-  .sidebar-toggle-box
-    .fa.fa-bars.tooltips{"data-original-title" => "Toggle Navigation", "data-placement" => "right"}
   / logo start
   = link_to 'BingBites', root_path, class: 'navbar-brand'
   / logo end
@@ -17,7 +15,8 @@
 - if @eateries.count == 0
   .listingEateries
     .row.mt
-      %h1 There are no eateries available yet
+      .nothingFound
+        %h1 There are no eateries available yet, our team is setting up things to bring you some.
 - else
   .listingEateries
     .row.mt

@@ -34,10 +34,11 @@
             %li
               = link_to 'Edit Eateries', new_eatery_path
 
-      %li.sub-menu
-        = link_to logout_path, class: 'logout', method: :delete do
-          LOG OUT &emsp;
+      %li.sub-menu.logout
+        = link_to logout_path, method: :delete do
           %i.fa.fa-sign-out
+          LOG OUT &emsp;
+          
     / sidebar menu end
 / sidebar end
 
