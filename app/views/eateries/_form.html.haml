@@ -7,21 +7,21 @@
       %ul
         - @eatery.errors.full_messages.each do |message|
           %li= message
-  .field
+  .form-group.field
+    = f.label :name
+    %br/
+    = f.text_field :name, class: 'form-control'
+  .form-group.field
+    = f.label :address
+    %br/
+    = f.text_field :address, class: 'form-control'
+  .form-group.field
     = f.label :image
     %br/
-    = f.file_field :eatery_img
-  .field
+    = f.file_field :eatery_img, class: 'form-control'
+  .form-group.field
     = f.label :category
     %br/
     = f.select(:category_id, options_for_select(@categories), include_blank: "Select a category")
-  .field
-    = f.label :name
-    %br/
-    = f.text_field :name
-  .field
-    = f.label :address
-    %br/
-    = f.text_field :address
-  .actions
-    = f.submit
+  .form-group.actions
+    = f.submit class: 'btn btn-success'

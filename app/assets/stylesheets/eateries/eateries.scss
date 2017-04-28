@@ -23,11 +23,20 @@
 
 #map {
   position:absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  width:70%;
+  left:0;
+  width:40%;
   height: 70%;
+}
+
+.showTitle {
+  color: coral;
+  font-size: -webkit-xxx-large;
+}
+
+.showTitleHeader {
+  margin-top: -25px;
+  background: white;
+  width: 40%;
 }
 
 .nothingFound {
