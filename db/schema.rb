@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427202437) do
+ActiveRecord::Schema.define(version: 20170501185933) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -22,13 +22,15 @@ ActiveRecord::Schema.define(version: 20170427202437) do
   create_table "eateries", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
     t.integer  "category_id"
     t.string   "eatery_img_file_name"
     t.string   "eatery_img_content_type"
     t.integer  "eatery_img_file_size"
     t.datetime "eatery_img_updated_at"
+    t.string   "lat",                     default: "42.08733738208514"
+    t.string   "long",                    default: "-75.97078230443904"
   end
 
   create_table "users", force: :cascade do |t|

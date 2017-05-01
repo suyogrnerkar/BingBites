@@ -21,11 +21,29 @@
   color: #989898;
 }
 
-#map {
+.mapNewAdd {
+  width: 100% !important;
+}
+
+.showMap {
   position:absolute;
   left:0;
-  width:40%;
-  height: 70%;
+  height: 480px;
+}
+
+.map {
+  position:absolute;
+  left:0;
+  height: 457px;
+  top: 20px;
+  left: 20px;
+}
+
+.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  clear: inherit;
+  position: absolute;
+  top: 0px;
+  right: 50px;
 }
 
 .showTitle {
