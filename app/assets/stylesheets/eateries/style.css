@@ -236,13 +236,14 @@ ul.top-menu > li > .logout {
     width: 210px;
     height: 100%;
     position: fixed;
-    background: rgba(0, 23, 76, 0.86);
+    background: rgba(56, 53, 53, 0.94);
     z-index: 999;
 }
 
 #sidebar h5 {
 	color: #f2f2f2;
 	font-weight: 700;
+    margin-bottom: 50px;
 }
 
 #sidebar ul li {
@@ -288,7 +289,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 }
 
 ul.sidebar-menu {
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 #sidebar > ul > li > ul.sub {
@@ -369,7 +370,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: rgba(208, 0, 63, 0.84);
+    background: rgba(254, 108, 110, 0.84);
     color: #fff;
     display: block;
     -webkit-transition: all 0.3s ease;
@@ -410,19 +411,26 @@ ul.sidebar-menu li a.active i {
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     z-index: 1002;
 }
 
 .black-bg {
-    text-align: center;
-    padding: 5px;
-    padding-top: 10px;
+    /*text-align: center;*/
+    margin-left: 210px;
+    padding-top: 15px;
+    padding-left: 45px;
     /*background: rgba(14, 14, 14, 0.25);*/
 }
 
+.logoBingBites{
+    margin-right: 125px;
+    color: rgba(255, 93, 95, 0.9);
+    font-weight: 900;
+    font-family: fantasy;
+}
 
 .wrapper {
     display: inline-block;

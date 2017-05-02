@@ -39,6 +39,10 @@
   left: 20px;
 }
 
+.latLong {
+  display: none;
+}
+
 .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
   clear: inherit;
   position: absolute;
@@ -47,7 +51,7 @@
 }
 
 .showTitle {
-  color: coral;
+  color: rgb(135, 127, 116);
   font-size: -webkit-xxx-large;
 }
 
@@ -58,8 +62,13 @@
 }
 
 .nothingFound {
-  text-align: center;
-  margin: 200px;  
+  text-align: left;
+  margin: 150px 0px 0px 250px;
+  width: 450px; 
+}
+.info{
+  color: #b16767;  
+  text-transform: capitalize;
 }
 
 .listingEateries {

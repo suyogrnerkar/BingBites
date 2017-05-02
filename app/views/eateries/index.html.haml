@@ -1,10 +1,11 @@
 %header.header.black-bg
   / logo start
-  = link_to 'BingBites', root_path, class: 'navbar-brand'
+  / = link_to 'BingBites', root_path, class: 'navbar-brand'
   / logo end
   .top-menu
     %ul.nav.pull-right.top-menu
-    .h2
+    .h3
+      %span.logoBingBites BingBites
       - if params[:category] 
         = "Looking for #{params[:category].titleize} cuisine today?"
       - else
