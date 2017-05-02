@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bingbites
+    / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application-eateries', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .clearfix
+    %body
+      #page-wrapper
+        - flash.each do |key, value|
+          %div{:class => "alert alert-#{key}"}
+            = value
+        = yield
+  = javascript_include_tag "https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js"
+  = stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css"
+  = javascript_include_tag 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'
+  = stylesheet_link_tag 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css'
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3V5b2dybmVya2FyIiwiYSI6IkJjTWFNVjQifQ.umq3dIayAEU8Bk3PsoJftQ';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/suyogrnerkar/cj0lbaxqh00312smtgu81rtnv',
+center: [-75.9180, 42.0987], // starting position
+zoom: 6, // starting zoom
+zoomControl: false
+});
+
+new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+// Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl());
+
+</script>
+

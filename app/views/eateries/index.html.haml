@@ -1,0 +1,35 @@
+%header.header.black-bg
+  / logo start
+  = link_to 'BingBites', root_path, class: 'navbar-brand'
+  / logo end
+  .top-menu
+    %ul.nav.pull-right.top-menu
+    .h2
+      - if params[:category] 
+        = "Looking for #{params[:category].titleize} cuisine today?"
+      - else
+        Find the best restraunts, cafe's and eateries.
+= render 'sidebar'
+
+.wrapper
+- if @eateries.count == 0
+  .listingEateries
+    .row.mt
+      .nothingFound
+        %h1 There are no eateries available yet, our team is setting up things to bring you some.
+- else
+  .listingEateries
+    .row.mt
+      - @eateries.each do |eatery|
+        .col-md-3.col-sm-4.mb
+          .white-panel.pn
+            .blog-bg
+              = link_to eatery do  
+                = image_tag eatery.eatery_img.url(:eatery_index), class: 'eateryImg'
+              .white-header.titleImg
+                = link_to eatery.name.upcase, eatery_path(eatery), class: 'eateryTitle'
+                .address
+                  = eatery.address.slice(0, 30) 
+          / = image_tag ea.book_img.url(:book_index), class: "book"
+
+

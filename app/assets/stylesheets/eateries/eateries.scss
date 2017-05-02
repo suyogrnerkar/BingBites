@@ -1,0 +1,68 @@
+// Place all the styles related to the Eateries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.avatar {
+  width: 60px;
+}
+
+.logout {
+  margin-top: 30px;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  line-height: 28px;
+  color: #b5b5b5;
+  margin: 0px 42px 0px 42px;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  text-decoration: none;
+  color: #989898;
+}
+
+#map {
+  position:absolute;
+  left:0;
+  width:40%;
+  height: 70%;
+}
+
+.showTitle {
+  color: coral;
+  font-size: -webkit-xxx-large;
+}
+
+.showTitleHeader {
+  margin-top: -25px;
+  background: white;
+  width: 40%;
+}
+
+.nothingFound {
+  text-align: center;
+  margin: 200px;  
+}
+
+.listingEateries {
+  width: 100%;
+  height: auto;
+  padding-left: 20%;
+  padding-right: 5%;
+}
+
+.eateryImg {
+  width: 100%;
+  height: 165px;
+}
+
+.eateryTitle {
+  margin-top: 3px;
+}
+
+.titleImg {
+  margin-top: 3px;
+  padding: 23px !important;
+  background: #fff !important; 
+
+}

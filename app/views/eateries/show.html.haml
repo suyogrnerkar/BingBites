@@ -1,0 +1,20 @@
+%p#notice= notice
+.blog-bg.showTitleHeader
+  .white-header.titleImg
+    %h3.showTitle
+      %strong= @eatery.name.upcase
+    %h3.form-group
+      We are located at, 
+      %strong= @eatery.address
+    %h4.form-group
+      Cuisine we serve, 
+      %strong= @eatery.category ? @eatery.category.name.titleize : 'No Category'
+    .logout
+      = link_to 'Back', root_path, method: :get, class: 'btn btn-primary'
+      |
+      = link_to 'Edit', edit_eatery_path(@eatery), class: 'btn btn-warning'
+      |
+      = link_to 'Delete', eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger'
+  .map.form-group
+    #map
+      

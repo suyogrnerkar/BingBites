@@ -1,0 +1,9 @@
+.container.newEatery.center
+  .span12
+    .row
+      .col-md-offset-3.col-sm-6
+        %h2.text-center
+          Create New Eatery
+        = render 'form'
+        .form-group
+          = link_to 'Back', eateries_path, method: :get, class: 'btn btn-primary'
