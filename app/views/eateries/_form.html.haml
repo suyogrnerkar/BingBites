@@ -23,5 +23,15 @@
     = f.label :category
     %br/
     = f.select(:category_id, options_for_select(@categories), include_blank: "Select a category")
+  .form-group.info.float-right.h5
+    = f.label '#IMP: Click to select Latitude, Longitude from map before or enter values before save.'
+    %br/
   .form-group.actions
     = f.submit class: 'btn btn-success'
+  .form-group
+    = f.label :latitude
+    = f.text_field :lat, class: 'form-control'
+    %br/
+    = f.label :longitude
+    = f.text_field :long, class: 'form-control'
+
