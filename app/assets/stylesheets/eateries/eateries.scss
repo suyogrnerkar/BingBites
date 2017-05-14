@@ -25,8 +25,10 @@
 
 .mapNewAdd {
   width: 100% !important;
-      overflow: visible;
-    height: 520px;
+  overflow: visible;
+  height: 518px;
+  border: 2px solid #dadada;
+  border-radius: 5px;
 }
 
 .showMap {
@@ -70,6 +72,10 @@
   width: 35%;
 }
 
+.showCategory {
+  color: rgb(105, 105, 105)
+}
+
 .cuisineCategory {
   position: absolute;
   /* top: 0; */
@@ -90,6 +96,7 @@
   padding-top: 33px !important;
   background: rgba(229, 229, 229, 0.1) !important;
   box-shadow: none !important;
+  color: #c1c1c1;
 }
 
 .nothingFound {
@@ -164,10 +171,19 @@
   width: 100%;
   text-align: right;
   letter-spacing: 1px;
-  color: rgb(199, 199, 199)
+  color: #e2e2e2;
 }
 
 .btn-array {
   margin: 0 10px 0 0;
+}
+
+form[class*='_eatery'] {
+  padding: 30px;
+  background: #fff;
+  border: 2px solid #dadada;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 

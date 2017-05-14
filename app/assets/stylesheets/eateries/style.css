@@ -3,8 +3,8 @@
 
 /* BASIC THEME CONFIGURATION */
 body {
-    color: rgb(123, 123, 123);
-    background: rgba(37, 37, 37, 0.99);
+    color: #000;
+    background: rgba(0, 0, 0, 0.80);
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -454,8 +454,8 @@ ul.sidebar-menu li a.active i {
     text-align: center;
     border: none;
     /* border-bottom: 2px solid #ffffff; */
-    box-shadow: 4px 4px 0px rgba(95, 94, 94, 0.40);
-    background: #ffffff;
+    box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.40);
+    background: #f3f3f3;
     font-size: 23px;
     border-radius: 3px;
 }
@@ -470,7 +470,7 @@ ul.sidebar-menu li a.active i {
 .searchBar:focus {
     background: rgba(229, 229, 229, 0.9);
     outline: -webkit-focus-ring-color auto 1px;
-    box-shadow: 4px 4px 0px rgba(95, 94, 94, 0.99);
+    box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.99);
     outline-style: inherit;
     color: black !important;
 }
@@ -1044,11 +1044,11 @@ PANELS CONFIGURATIONS
 
 .pn {
 	height: 270px;
-	box-shadow: 4px 4px 0px rgba(95, 94, 94, 0.40);
+	box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.40);
 }
 
 .pn:hover {
-	box-shadow: 4px 4px 0px rgba(95, 94, 94, 0.99);
+	box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.99);
 }
 
 /*Grey Panel*/

@@ -6,7 +6,7 @@
     %h3.form-group.showSubTitle
       We are located at, 
       %strong= @eatery.address
-    %h4.form-group
+    %h4.form-group.showCategory
       Cuisine we serve, 
       %strong= @eatery.category ? @eatery.category.name.titleize : 'No Category'
     .logout
