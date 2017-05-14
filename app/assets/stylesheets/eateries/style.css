@@ -4,7 +4,7 @@
 /* BASIC THEME CONFIGURATION */
 body {
     color: #000;
-    background: rgba(0, 0, 0, 0.80);
+    background: #dedede;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -195,8 +195,8 @@ hr {
 }
 
 .mb {
-	margin-bottom: 25px;
-  padding: 20px;
+  margin-bottom: 50px;
+  padding: 25px;
 }
 
 .ml {
@@ -425,6 +425,8 @@ ul.sidebar-menu li a.active i {
 .black-bg {
     /*text-align: center;*/
     margin-left: 210px;
+      background-image:url(../img/zoom.png);
+
     /*background: rgba(14, 14, 14, 0.25);*/
 }
 
@@ -448,14 +450,14 @@ ul.sidebar-menu li a.active i {
 
 .searchBar {
     height: 90px;
-    width: 975px;
-    margin: 35px 10px 0 10px;
+    width: 1005px;
+    margin: 35px 10px 0 0px;
     /* padding-left: 14px; */
     text-align: center;
     border: none;
     /* border-bottom: 2px solid #ffffff; */
-    box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.40);
-    background: #f3f3f3;
+    box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
+    background: #ececec;
     font-size: 23px;
     border-radius: 3px;
 }
@@ -470,7 +472,7 @@ ul.sidebar-menu li a.active i {
 .searchBar:focus {
     background: rgba(229, 229, 229, 0.9);
     outline: -webkit-focus-ring-color auto 1px;
-    box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.99);
+    box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.66);
     outline-style: inherit;
     color: black !important;
 }
@@ -1043,12 +1045,12 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 270px;
-	box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.40);
+	height: 370px;
+	box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
 }
 
 .pn:hover {
-	box-shadow: 3px 3px 0px rgba(95, 94, 94, 0.99);
+	box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.66);
 }
 
 /*Grey Panel*/

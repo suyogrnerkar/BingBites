@@ -28,7 +28,7 @@
   .listingEateries
     .row.mt
       - @eateries.each do |eatery|
-        .col-md-3.col-sm-4.mb
+        .col-md-4.col-sm-4.mb
           .white-panel.pn
             .blog-bg
               = link_to eatery do  
@@ -39,6 +39,7 @@
                 = link_to eatery.name.upcase, eatery_path(eatery), class: 'eateryTitle'
                 .address
                   = eatery.address.slice(0, 30) 
+              .showBackground{style: "background-image: url(#{eatery.eatery_img.url});"}
           / = image_tag ea.book_img.url(:book_index), class: "book"
 
 

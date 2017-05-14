@@ -1,6 +1,7 @@
 %p#notice= notice
 .blog-bg.showTitleHeader
   .white-header.titleHeaderShow
+    .showBackground{style: "background-image: url(#{@eatery.eatery_img.url});"}
     %h3.showTitle
       %strong= @eatery.name.upcase
     %h3.form-group.showSubTitle
@@ -13,13 +14,15 @@
       = link_to root_path, method: :get, class: 'btn btn-array btn-primary' do
         %i.fa.fa-backward
         &nbsp;Back&nbsp;
-      = link_to edit_eatery_path(@eatery), class: 'btn btn-array btn-warning' do
-        %i.fa.fa-edit
-        &nbsp;Edit&nbsp;
-      = link_to eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"},
-        class: 'btn btn-danger btn-array' do
-        %i.fa.fa-trash
-        &nbsp;Delete&nbsp;
+      - if current_user.super_admin?
+        = link_to edit_eatery_path(@eatery), class: 'btn btn-array btn-warning' do
+          %i.fa.fa-edit
+          &nbsp;Edit&nbsp;
+        = link_to eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"},
+          class: 'btn btn-danger btn-array' do
+          %i.fa.fa-trash
+          &nbsp;Delete&nbsp;
+
 
     .latLong
       = { lat: @eatery.lat, long: @eatery.long }.to_json 

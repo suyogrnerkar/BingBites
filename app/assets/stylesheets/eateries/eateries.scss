@@ -5,6 +5,7 @@
   width: 100% !important;
   margin-bottom: 20px;
   border-radius: 0px;
+  box-shadow: 0px 5px 0px rgba(95, 94, 94, 1);
 }
 
 .logout {
@@ -59,44 +60,48 @@
 }
 
 .showTitle {
-  color: rgba(251, 94, 94, 0.85);
-  font-size: -webkit-xxx-large;
+  color: rgba(249, 71, 71, 0.99);
+  font-size: 55px;
 }
 .showSubTitle {
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.5;
 }
 
 .showTitleHeader {
   margin-top: -25px;
   background: white;
   width: 35%;
+  line-height: 1.5;
 }
 
 .showCategory {
-  color: rgb(105, 105, 105)
+  color: rgba(255, 255, 255, 0.60);
 }
 
 .cuisineCategory {
   position: absolute;
   /* top: 0; */
-  width: 180px;
+  width: 145px;
   line-height: 45px;
-  /* padding: 0 10px; */
-  background: rgba(0, 197, 222, 0.9);
+  /* padding: 1px 0px; */
+  background: rgba(0, 0, 0, 0.5);
   /* transform: rotate(90deg); */
   transform: rotate(270deg);
   transform-origin: left 0;
   color: white;
   font-weight: 600;
+  margin: 145px 0px;
+  border-radius: 3px 0px 0px 0px;
 }
 
 .categoryHeader {
   float: left;
   margin: 80px 0 0 100px;
   padding-top: 33px !important;
-  background: rgba(229, 229, 229, 0.1) !important;
+  background: rgb(230, 230, 230) !important;
   box-shadow: none !important;
-  color: #c1c1c1;
+  color: #949494;
 }
 
 .nothingFound {
@@ -118,31 +123,44 @@
 
 .eateryImg {
   width: 100%;
-  height: 180px;
+  height: 225px;
+  /* padding: 1px; */
+  opacity: 0.9;
+  border-radius: 3px 3px 0 0;
 }
 
 .eateryTitle {
   margin-top: 3px;
   color: #1c1c1c;
-  font-size: medium;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .titleImg {
-  margin-top: 5px;
-  padding: 20px !important;
-  background: rgb(228, 228, 228) !important; 
+    margin: 10px 0 0 45px;
+    padding: 37px 0px !important;
+    background: #e4e4e4 !important;
 }
 
 .titleHeaderShow {
   padding: 40px 60px !important;
-  background: rgba(0, 0, 0, 0.81) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
   position: relative;
   top: 0;
   z-index: 999;
   height: 100%;
   position: fixed;
-  width: 35%;
+  width: 32%;
+}
+
+.showBackground {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  opacity: 0.35;
 }
 
 .headerRibbon {
@@ -164,14 +182,14 @@
 
 .location {
   float: right;
-  margin-top: 153px;
-  right: 50px;
+  margin-top: 145px;
+  right: 30px;
   position: absolute;
   font-size: 14px;
   width: 100%;
   text-align: right;
   letter-spacing: 1px;
-  color: #e2e2e2;
+  color: #929292;
 }
 
 .btn-array {
