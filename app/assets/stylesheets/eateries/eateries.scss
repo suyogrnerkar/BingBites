@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .avatar {
-  width: 90px;
-  margin-bottom: 10px;
+  width: 100% !important;
+  margin-bottom: 20px;
+  border-radius: 0px;
 }
 
 .logout {
@@ -24,18 +25,22 @@
 
 .mapNewAdd {
   width: 100% !important;
+      overflow: visible;
+    height: 520px;
 }
 
 .showMap {
-  position:absolute;
+  position:absolute !important;
+  overflow: none;
   left:0;
-  height: 480px;
+  height: 100%;
+  width: 100%;
+  top: 0;
 }
 
 .map {
   position:absolute;
   left:0;
-  height: 457px;
   top: 20px;
   left: 20px;
 }
@@ -52,37 +57,39 @@
 }
 
 .showTitle {
-  color: #fb5e60;
+  color: rgba(251, 94, 94, 0.85);
   font-size: -webkit-xxx-large;
 }
 .showSubTitle {
-  color: rgba(0, 0, 0, 0.76);
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .showTitleHeader {
   margin-top: -25px;
   background: white;
-  width: 40%;
+  width: 35%;
 }
 
 .cuisineCategory {
   position: absolute;
-    /* top: 0; */
-    width: 184px;
-    line-height: 45px;
-    /* padding: 0 10px; */
-    background: rgba(0, 197, 222, 0.83);
-    /* transform: rotate(90deg); */
-    transform: rotate(270deg);
-    transform-origin: left 0;
-    color: white;
-    font-weight: 600;
+  /* top: 0; */
+  width: 180px;
+  line-height: 45px;
+  /* padding: 0 10px; */
+  background: rgba(0, 197, 222, 0.9);
+  /* transform: rotate(90deg); */
+  transform: rotate(270deg);
+  transform-origin: left 0;
+  color: white;
+  font-weight: 600;
 }
 
 .categoryHeader {
   float: left;
   margin: 80px 0 0 100px;
-  padding-top: 23px !important;
+  padding-top: 33px !important;
+  background: rgba(229, 229, 229, 0.1) !important;
+  box-shadow: none !important;
 }
 
 .nothingFound {
@@ -104,7 +111,7 @@
 
 .eateryImg {
   width: 100%;
-  height: 184px;
+  height: 180px;
 }
 
 .eateryTitle {
@@ -117,6 +124,50 @@
 .titleImg {
   margin-top: 5px;
   padding: 20px !important;
-  background: #fff !important; 
-
+  background: rgb(228, 228, 228) !important; 
 }
+
+.titleHeaderShow {
+  padding: 40px 60px !important;
+  background: rgba(0, 0, 0, 0.81) !important;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  height: 100%;
+  position: fixed;
+  width: 35%;
+}
+
+.headerRibbon {
+  background: #3e3e3e;
+  line-height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  color: white;
+  border-bottom: 2px solid #ff6e6e;
+  text-transform: uppercase;
+}
+
+.top-100 {
+  margin-top: 100px;
+}
+
+.location {
+  float: right;
+  margin-top: 153px;
+  right: 50px;
+  position: absolute;
+  font-size: 14px;
+  width: 100%;
+  text-align: right;
+  letter-spacing: 1px;
+  color: rgb(199, 199, 199)
+}
+
+.btn-array {
+  margin: 0 10px 0 0;
+}
+

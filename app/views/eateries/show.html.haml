@@ -1,6 +1,6 @@
 %p#notice= notice
 .blog-bg.showTitleHeader
-  .white-header.titleImg
+  .white-header.titleHeaderShow
     %h3.showTitle
       %strong= @eatery.name.upcase
     %h3.form-group.showSubTitle
@@ -10,11 +10,17 @@
       Cuisine we serve, 
       %strong= @eatery.category ? @eatery.category.name.titleize : 'No Category'
     .logout
-      = link_to 'Back', root_path, method: :get, class: 'btn btn-primary'
-      |
-      = link_to 'Edit', edit_eatery_path(@eatery), class: 'btn btn-warning'
-      |
-      = link_to 'Delete', eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger'
+      = link_to root_path, method: :get, class: 'btn btn-array btn-primary' do
+        %i.fa.fa-backward
+        &nbsp;Back&nbsp;
+      = link_to edit_eatery_path(@eatery), class: 'btn btn-array btn-warning' do
+        %i.fa.fa-edit
+        &nbsp;Edit&nbsp;
+      = link_to eatery_path(@eatery), method: :delete, data: { confirm: "Are you sure?"},
+        class: 'btn btn-danger btn-array' do
+        %i.fa.fa-trash
+        &nbsp;Delete&nbsp;
+
     .latLong
       = { lat: @eatery.lat, long: @eatery.long }.to_json 
   .form-inline
