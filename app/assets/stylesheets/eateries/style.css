@@ -18,10 +18,10 @@ body {
   border-radius: 3px;
   z-index: 9999;
   margin-top: 35px;
-  width: 976px;
+  width: 1000px;
   line-height: 58px;
   font-weight: 500;
-  margin-left: 254px;
+  margin-left: 240px;
   font-size: 26px;
 }
 
@@ -429,7 +429,7 @@ ul.sidebar-menu li a.active i {
 .black-bg {
     /*text-align: center;*/
     margin-left: 210px;
-      background-image:url(../img/zoom.png);
+    /*background-image:url(../img/zoom.png);*/
 
     /*background: rgba(14, 14, 14, 0.25);*/
 }
