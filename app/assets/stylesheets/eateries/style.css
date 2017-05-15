@@ -191,7 +191,7 @@ hr {
 }
 
 .mt {
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 .mb {
@@ -449,17 +449,17 @@ ul.sidebar-menu li a.active i {
 }
 
 .searchBar {
-    height: 90px;
-    width: 1005px;
-    margin: 35px 10px 0 0px;
-    /* padding-left: 14px; */
-    text-align: center;
-    border: none;
-    /* border-bottom: 2px solid #ffffff; */
-    box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
-    background: #ececec;
-    font-size: 23px;
-    border-radius: 3px;
+  height: 90px;
+  width: 1010px;
+  margin: 35px 10px 0 -5px;
+  /* padding-left: 14px; */
+  text-align: center;
+  border: none;
+  /* border-bottom: 2px solid #ffffff; */
+  box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
+  background: #ececec;
+  font-size: 23px;
+  border-radius: 3px;
 }
 
 .searchBar:hover {
