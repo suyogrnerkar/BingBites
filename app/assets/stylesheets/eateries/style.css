@@ -34,6 +34,10 @@ a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
 }
+
+a:hover {
+  color: #d6393b;
+}
 ::selection {
 
     background: #68dff0;
@@ -240,7 +244,7 @@ ul.top-menu > li > .logout {
     width: 200px;
     height: 100%;
     position: fixed;
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(25, 25, 25, 0.89);
     overflow: auto;
     z-index: 999;
 }
@@ -450,7 +454,7 @@ ul.sidebar-menu li a.active i {
 
 .searchBar {
   height: 90px;
-  width: 1010px;
+  width: 1000px;
   margin: 35px 10px 0 -5px;
   /* padding-left: 14px; */
   text-align: center;
@@ -1136,7 +1140,7 @@ PANELS CONFIGURATIONS
 
 /*White Panel */
 .white-panel {
-	text-align: center;
+	/*text-align: center;*/
 	background: rgb(228, 228, 228) !important;
 	color: #ccd1d9;
     border-radius: 3px;
@@ -1151,8 +1155,9 @@ PANELS CONFIGURATIONS
 	background: #f4f4f4;
 	padding: 3px;
 	margin-bottom: 15px;
-	color: rgb(160, 160, 160);
-    border-radius: 3px;
+	color: rgba(101, 101, 101, 0.99);
+  border-radius: 3px;
+  line-height: 20px;
 }
 .white-panel .small {
 	font-size: 10px;

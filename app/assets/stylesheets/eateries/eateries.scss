@@ -84,7 +84,7 @@
   /* top: 0; */
   width: 145px;
   line-height: 46px;
-  /* padding: 1px 0px; */
+  text-align: center;
   background: rgb(95, 94, 94);
   /* transform: rotate(90deg); */
   transform: rotate(270deg);
@@ -118,7 +118,7 @@
   width: 100%;
   height: auto;
   padding-left: 20%;
-  padding-right: 45px;
+  padding-right: 55px;
 }
 
 .eateryImg {
@@ -132,13 +132,13 @@
 .eateryTitle {
   margin-top: 3px;
   color: #1c1c1c;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .titleImg {
-    margin: 10px 0 0 45px;
-    padding: 37px 0px !important;
+    margin: 0px 0 0 65px;
+    padding: 25px 0px !important;
     background: #e4e4e4 !important;
 }
 
@@ -160,7 +160,8 @@
   top: 0;
   z-index: -1;
   left: 0;
-  opacity: 0.35;
+  opacity: 0.25;
+  background-size: cover !important;
 }
 
 .headerRibbon {
@@ -183,7 +184,7 @@
 .location {
   float: right;
   margin-top: 155px;
-  right: 30px;
+  right: 40px;
   position: absolute;
   font-size: 14px;
   width: 100%;
@@ -225,6 +226,16 @@
   color: rgb(255, 255, 255) !important;
 }
 
+.priceRange {
+  right: -65px;
+  position: relative;
+  bottom: 35px;
+  font-size: 0px;
+}
+
+.priceRange i {
+  color: #b5b5b5 !important;
+}
 .btn-array {
   margin: 0 10px 0 0;
 }

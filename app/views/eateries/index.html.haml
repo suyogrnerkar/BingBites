@@ -62,7 +62,10 @@
                 .ratings
                   = eatery.rating
                   %i.fa.fa-heart
-
+              - if eatery.price_range > 0
+                .priceRange
+                  - eatery.price_range.times do
+                    %i.fa.fa-usd 
               .showBackground{style: "background-image: url(#{eatery.eatery_img.url});"}
           / = image_tag ea.book_img.url(:book_index), class: "book"
 
