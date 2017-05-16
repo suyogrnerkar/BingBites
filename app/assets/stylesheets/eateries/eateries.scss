@@ -186,7 +186,6 @@
   font-size: 14px;
   width: 100%;
   text-align: right;
-  letter-spacing: 1px;
   color: #757575;
   font: 'Ruda', sans-serif;
 }
@@ -194,17 +193,19 @@
 .headerLinks {
   font-size: 14px;
   text-align: left;
-  letter-spacing: 1px;
   color: #757575;
   position: absolute;
-  /* left: 95px; */
   width: 100%;
 }
 
 .headerLinks a {
-  margin-right: 30px;
+  margin-right: 20px;
   color: #757575;
   text-decoration: none;
+}
+
+.headerLinks .fa {
+  margin-right: 5px;
 }
 
 .ratings {
