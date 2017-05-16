@@ -4,7 +4,7 @@
   / logo end
   .top-menu
     %ul.nav.pull-right.top-menu
-    .header
+    .header.row
       #logoBingBites
         = image_tag "pic01.jpg"
       / %span.logoBingBites BingBites
@@ -15,25 +15,25 @@
         %input.searchBar{:placeholder => "Start searching the best cafe's & eateries...",   | 
         :type => "text"}
     
-    #location.location
-      %i.fa.fa-compass
-      Geolocating...
-    .headerLinks  
-      = link_to '#' do  
-        %i.fa.fa-fort-awesome 
-        Events
-      = link_to '#' do  
-        %i.fa.fa-free-code-camp
-        Nightlife
-      = link_to '#' do  
-        %i.fa.fa-ils
-        New Listing
-      = link_to '#' do  
-        %i.fa.fa-dot-circle-o
-        Trending
-      = link_to '#' do  
-        %i.fa.fa-btc
-        Deals
+      #location.location
+        %i.fa.fa-compass
+        Geolocating...
+      .headerLinks  
+        = link_to '#' do  
+          %i.fa.fa-fort-awesome 
+          Events
+        = link_to '#' do  
+          %i.fa.fa-free-code-camp
+          Nightlife
+        = link_to '#' do  
+          %i.fa.fa-ils
+          New Listing
+        = link_to '#' do  
+          %i.fa.fa-dot-circle-o
+          Trending
+        = link_to '#' do  
+          %i.fa.fa-btc
+          Deals
 
 = render 'sidebar'
 
