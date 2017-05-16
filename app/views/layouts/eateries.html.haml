@@ -14,9 +14,10 @@
     .clearfix
     %body
       #page-wrapper
-        - flash.each do |key, value|
-          %div{:class => "alert alert-#{key}"}
-            = value
+        .row
+          - flash.each do |key, value|
+            %div{:class => "alert alert-#{key}"}
+              = value
         = yield
     = javascript_include_tag 'https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'
     = javascript_include_tag 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'

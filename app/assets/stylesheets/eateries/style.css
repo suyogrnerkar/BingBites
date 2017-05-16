@@ -14,15 +14,14 @@ body {
 .alert {
   text-align: center;
   z-index: 100;
+  width: 77.4%;
   position: absolute;
   border-radius: 3px;
   z-index: 9999;
-  margin-top: 35px;
-  width: 1000px;
-  line-height: 58px;
+  line-height: 60px;
   font-weight: 500;
-  margin-left: 240px;
   font-size: 26px;
+  margin: 1.2em 0em 0em 10em;
 }
 
 ul li {
@@ -368,7 +367,7 @@ ul.sidebar-menu li a{
     color: #aeb2b7;
     text-decoration: none;
     display: block;
-    padding: 10px 0 15px 10px;
+    padding: 10px 0 10px 10px;
     font-size: 12px;
     outline: none;
     -webkit-transition: all 0.3s ease;
