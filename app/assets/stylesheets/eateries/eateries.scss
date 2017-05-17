@@ -9,6 +9,10 @@
   margin-top: 30px;
 }
 
+.traversal {
+  margin-top: 30px;
+}
+
 .navbar-brand {
   font-weight: 800;
   line-height: 28px;
@@ -33,9 +37,10 @@
   position: absolute !important;
   overflow: none;
   left: 0;
-  height: 100%;
-  width: 100%;
-  top: 0;
+  height: 50%;
+  width: 40%;
+  bottom: 0;
+  z-index: 999;
 }
 
 
@@ -58,7 +63,7 @@
 }
 
 .showTitle {
-  color: rgba(249, 71, 71, 0.99);
+  color: rgb(243, 69, 69);
   font-size: 55px;
 }
 
@@ -68,7 +73,6 @@
 }
 
 .showTitleHeader {
-  margin-top: -25px;
   background: white;
   width: 35%;
   line-height: 1.5;
@@ -76,6 +80,81 @@
 
 .showCategory {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.itemsHeader{
+  margin: .5em 0.3em 1em 1.3em;
+  font-size: 30px;
+  width: 22.8em;
+  height: 3em;
+  line-height: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.9;
+  font-weight: 100;
+  background: url(../ribbon.png) no-repeat;
+  background-size: 125%;
+  background-position: -86px -13.5em;
+  /* border: 1px solid #d0cdcd; */
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.81);
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.itemsListing {
+  display: block;
+  height: 100%;
+  width: 90%;
+  z-index: 999999;
+  position: fixed;
+  left: 40%;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  float: left;
+  padding: 0.5em 0px;
+  overflow: scroll;
+}
+
+.items li {
+  margin-bottom: 0.7em;
+  background: rgba(255, 255, 255, 0.9);
+  width: 62%;
+  border-radius: 3px;
+  height: 5em;
+  opacity: 1;
+  box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
+}
+
+.itemName {
+  margin: 5px 0.5em;
+  font-size: 20px;
+  float: left;
+  width: 10em;
+  height: 4.5em;
+  padding: 15px 1em;
+  font-weight: 700;
+  border-right: 1px solid rgba(222, 222, 222, 0.51);
+  margin-right: 1em;
+}
+
+.itemDescription {
+  padding: 15px 2em;
+  font-size: 13px;
+}
+
+.mapboxgl-control-container {
+  position: relative;
+  z-index: 99999999;
 }
 
 .cuisineCategory {
@@ -117,7 +196,7 @@
   width: 75%;
   float: left;
   margin-left: 20em;
-  margin-bottom: 15em;
+  margin-bottom: 12em;
 }
 
 .eateryImg {
@@ -142,14 +221,14 @@
 }
 
 .titleHeaderShow {
-  padding: 40px 60px !important;
+  padding: 30px 60px !important;
   background: rgba(0, 0, 0, 0.8) !important;
   position: relative;
   top: 0;
   z-index: 999;
-  height: 100%;
+  height: 50%;
   position: fixed;
-  width: 32%;
+  width: 40%;
 }
 
 .showBackground {
@@ -159,7 +238,7 @@
   top: 0;
   z-index: -1;
   left: 0;
-  opacity: 0.25;
+  opacity: 0.15;
   background-size: cover !important;
 }
 
@@ -308,4 +387,25 @@ form[class*='_eatery'] {
 
 .tos {
   margin: 10em 6em;
+}
+
+.notFound {
+  margin: 10em 10em;
+  width: 20em;
+  text-decoration: none;
+}
+
+.notFoundHeader {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.notFoundDescription {
+  margin-bottom: 20px;
+  color: #a5a5a5;
+  font-weight: 100;
+}
+
+.notFoundLinks a {
+  color: rgba(247, 71, 71, 0.71) !important; 
 }

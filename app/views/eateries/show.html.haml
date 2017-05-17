@@ -1,4 +1,3 @@
-%p#notice= notice
 .blog-bg.showTitleHeader
   .white-header.titleHeaderShow
     .showBackground{style: "background-image: url(#{@eatery.eatery_img.url});"}
@@ -10,7 +9,7 @@
     %h4.form-group.showCategory
       Cuisine we serve, 
       %strong= @eatery.category ? @eatery.category.name.titleize : 'No Category'
-    .logout
+    .traversal
       = link_to root_path, method: :get, class: 'btn btn-array btn-primary' do
         %i.fa.fa-backward
         &nbsp;Back&nbsp;
@@ -22,10 +21,28 @@
           class: 'btn btn-danger btn-array' do
           %i.fa.fa-trash
           &nbsp;Delete&nbsp;
-
-
-    .latLong
-      = { lat: @eatery.lat, long: @eatery.long }.to_json 
+  .itemsListing
+    - unless @eatery.items.blank?
+      .itemsHeader
+        Excluive Listing Just For You
+      %ul.items
+        - @eatery.items.each do |e|
+          %li
+            .itemName
+              = e.name
+            .itemDescription
+              = e.description
+    - else
+      .itemName.notFound
+        .notFoundHeader
+          = "Duh! No food here."
+        .notFoundDescription
+          = "Worry not. Our team is working hard to bring you some. Meanwhile  please head to some of the exciting listings that we have on file, just for you :)"
+        .notFoundLinks
+          = link_to "Discover more of fine dining around.", root_path 
+        
+  .latLong
+    = { lat: @eatery.lat, long: @eatery.long }.to_json 
   .form-inline
     .showMap#map
  
