@@ -95,6 +95,8 @@ GEM
     execjs (2.7.0)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    friendly_id (5.2.1)
+      activerecord (>= 4.0.0)
     gherkin (4.1.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -252,6 +254,7 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   font-awesome-rails
+  friendly_id
   haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.0)
   jquery-rails

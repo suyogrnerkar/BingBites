@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515015622) do
+ActiveRecord::Schema.define(version: 20170517005937) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -33,7 +33,10 @@ ActiveRecord::Schema.define(version: 20170515015622) do
     t.string   "long",                    default: "-75.97078230443904"
     t.integer  "rating",                  default: 0,                    null: false
     t.integer  "price_range",             default: 0,                    null: false
+    t.string   "slug"
   end
+
+  add_index "eateries", ["slug"], name: "index_eateries_on_slug", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
