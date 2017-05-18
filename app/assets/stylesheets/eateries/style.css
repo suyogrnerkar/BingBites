@@ -3,8 +3,8 @@
 
 /* BASIC THEME CONFIGURATION */
 body {
-    color: rgb(123, 123, 123);
-    background: #f2f2f2;
+    color: #000;
+    background: #dedede;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -14,14 +14,15 @@ body {
 .alert {
   text-align: center;
   z-index: 100;
+  width: 77.4%;
   position: absolute;
-  border-radius: 0px;
+  border-radius: 3px;
   z-index: 9999;
-  width: 100%;
-  line-height: 30px;
+  line-height: 60px;
   font-weight: 500;
+  font-size: 26px;
+  margin: 1.2em 0em 0em 10em;
 }
-
 
 ul li {
     list-style: none;
@@ -30,6 +31,10 @@ ul li {
 a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
+}
+
+a:hover {
+  color: #d6393b;
 }
 ::selection {
 
@@ -188,11 +193,12 @@ hr {
 }
 
 .mt {
-	margin-top: 25px;
+	margin-top: 30px;
 }
 
 .mb {
-	margin-bottom: 25px;
+  margin-bottom: 5em;
+  padding: 30px;
 }
 
 .ml {
@@ -233,10 +239,11 @@ ul.top-menu > li > .logout {
 /*sidebar navigation*/
 
 #sidebar {
-    width: 210px;
+    width: 200px;
     height: 100%;
     position: fixed;
-    background: rgba(56, 53, 53, 0.94);
+    background: rgba(25, 25, 25, 0.89);
+    overflow: auto;
     z-index: 999;
 }
 
@@ -290,7 +297,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 }
 
 ul.sidebar-menu {
-    margin-top: 50px;
+    /*margin-top: 35px;*/
 }
 
 #sidebar > ul > li > ul.sub {
@@ -349,7 +356,7 @@ ul.sidebar-menu li{
 }
 
 ul.sidebar-menu li.sub-menu{
-    line-height: 15px;
+    line-height: 10px;
 }
 
 ul.sidebar-menu li a span{
@@ -360,7 +367,7 @@ ul.sidebar-menu li a{
     color: #aeb2b7;
     text-decoration: none;
     display: block;
-    padding: 15px 0 15px 10px;
+    padding: 10px 0 10px 10px;
     font-size: 12px;
     outline: none;
     -webkit-transition: all 0.3s ease;
@@ -371,7 +378,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: rgba(254, 108, 110, 0.84);
+    background: rgba(253, 64, 66, 0.83);
     color: #fff;
     display: block;
     -webkit-transition: all 0.3s ease;
@@ -408,7 +415,6 @@ ul.sidebar-menu li a.active i {
 
 .header, .footer {
     min-height: 60px;
-    padding: 0 15px;
 }
 
 .header {
@@ -420,22 +426,59 @@ ul.sidebar-menu li a.active i {
 
 .black-bg {
     /*text-align: center;*/
-    margin-left: 210px;
-    padding-top: 15px;
-    padding-left: 45px;
+    margin-left: 20em;
+    width: 75%;
+    /*background-image:url(../img/zoom.png);*/
+
     /*background: rgba(14, 14, 14, 0.25);*/
 }
 
-.logoBingBites{
-    margin-right: 125px;
-    color: rgba(255, 93, 95, 0.9);
-    font-weight: 900;
-    font-family: fantasy;
+#logoBingBites {
+  float: left;
+  float: left;
+  position: absolute;
+  top: 3.2em;
+  left: 1.5em;
+}
+
+#logoBingBites img {
+  width: 70px;
+  opacity: 0.9;
+  border-radius: 100px;
+}
+
+.searchBar {
+  height: 90px;
+  width: 100%;
+  margin: 1.4em 0;
+  /* padding-left: 14px; */
+  text-align: center;
+  border: none;
+  /* border-bottom: 2px solid #ffffff; */
+  box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
+  background: #ececec;
+  font-size: 23px;
+  border-radius: 3px;
+}
+
+.searchBar:hover {
+    background: rgb(230, 230, 230);
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-style: inherit;
+    /* border-bottom: 1px solid rgb(220, 220, 220); */
+}
+
+.searchBar:focus {
+    background: rgba(229, 229, 229, 0.9);
+    outline: -webkit-focus-ring-color auto 1px;
+    box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.66);
+    outline-style: inherit;
+    color: black !important;
 }
 
 .wrapper {
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 150px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -1001,13 +1044,12 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	height: 345px;
+	box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.33);
 }
 
 .pn:hover {
-	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-
+	box-shadow: 2px 2px 1px rgba(95, 94, 94, 0.66);
 }
 
 /*Grey Panel*/
@@ -1093,9 +1135,10 @@ PANELS CONFIGURATIONS
 
 /*White Panel */
 .white-panel {
-	text-align: center;
-	background: #ffffff;
+	/*text-align: center;*/
+	background: rgb(228, 228, 228) !important;
 	color: #ccd1d9;
+    border-radius: 3px;
 }
 
 .white-panel p {
@@ -1107,7 +1150,9 @@ PANELS CONFIGURATIONS
 	background: #f4f4f4;
 	padding: 3px;
 	margin-bottom: 15px;
-	color: #c6c6c6;
+	color: rgba(101, 101, 101, 0.99);
+  border-radius: 3px;
+  line-height: 20px;
 }
 .white-panel .small {
 	font-size: 10px;
