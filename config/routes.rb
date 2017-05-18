@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :eateries do
+    resources :items 
   end
   resources :searches
   # Example of regular route:

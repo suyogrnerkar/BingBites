@@ -83,7 +83,7 @@
 }
 
 .itemsHeader{
-  margin: .5em 0.3em 1em 1.3em;
+  margin: .5em 0.3em 0.5em 1.3em;
   font-size: 30px;
   width: 22.8em;
   height: 3em;
@@ -125,10 +125,18 @@
   overflow: scroll;
 }
 
+.items {
+  float: left;
+  width: 36em;
+}
+
+.itemsListing ul {
+  width: 36em;
+}
+
 .items li {
   margin-bottom: 0.7em;
   background: rgba(255, 255, 255, 0.9);
-  width: 62%;
   border-radius: 3px;
   height: 5em;
   opacity: 1;
@@ -150,6 +158,40 @@
 .itemDescription {
   padding: 15px 2em;
   font-size: 13px;
+}
+
+.addNewItem {
+  float: left;
+  width: 21.5em;
+  padding: 0px 0 0 3em;
+}
+
+.noItemsFound li {
+  padding: 3.35em 5em !important;
+  font-size: 44px !important;
+  line-height: 0em !important;
+}
+
+.createNewItem {
+  position: relative !important;
+  margin-bottom: 15px !important;
+  border-radius: 3px;
+  line-height: 96px !important;
+}
+
+.manageListing ul {
+  float: left;
+  width: 40em;
+}
+
+.itemImage {
+  float: left;
+}
+
+.eateryItemImg {
+  height: 5em;
+  width: 7em;
+  border-radius: 3px 0 0 3px;
 }
 
 .mapboxgl-control-container {
@@ -214,6 +256,17 @@
   font-weight: 700;
 }
 
+.manageListing {
+  width: 100%;
+  left: 0%;
+}
+
+.manageListing .itemsHeader {
+  width: 39.7em;
+  background-position: -150px -25.2em;
+}
+
+
 .titleImg {
   margin: 0px 0 0 65px;
   padding: 25px 0px !important;
@@ -243,7 +296,7 @@
 }
 
 .headerRibbon {
-  background: #3e3e3e;
+  background: #757575;
   line-height: 75px;
   position: absolute;
   top: 0;
@@ -251,7 +304,7 @@
   width: 100%;
   margin: 0;
   color: white;
-  border-bottom: 2px solid #ff6e6e;
+  border-bottom: 1px solid #ff6e6e;
   text-transform: uppercase;
 }
 

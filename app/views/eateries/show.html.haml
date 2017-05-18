@@ -28,10 +28,15 @@
       %ul.items
         - @eatery.items.each do |e|
           %li
+            .itemImage
+              = image_tag e.item_image.url(:item_medium), class: 'eateryItemImg'
             .itemName
               = e.name
             .itemDescription
-              = e.description
+              - if e.description.length < 160
+                = e.description
+              - else
+                = "#{e.description.first(160)}..."
     - else
       .itemName.notFound
         .notFoundHeader
