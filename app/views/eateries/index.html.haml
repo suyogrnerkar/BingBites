@@ -58,7 +58,8 @@
               .cuisineCategory
                 =  eatery.category ? eatery.category.name : 'Misc'
               .white-header.titleImg
-                = link_to eatery.name.upcase, eatery_path(eatery), class: 'eateryTitle'
+                = link_to eatery.name.upcase, eatery_path(eatery),
+                class: 'eateryTitle'
                 .address
                   = eatery.address.slice(0, 30) 
               - if eatery.rating > 0
