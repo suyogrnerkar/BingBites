@@ -39,23 +39,6 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
-  
-#   OmniAuth.config.test_mode = true
-#   omniauth_hash = { 'provider' => 'twitter',
-#                   'uid' => '12345',
-#                   'info' => {
-#                       'name' => 'natasha',
-#                       'email' => 'hi@natashatherobot.com',
-#                       'nickname' => 'NatashaTheRobot'
-#                   },
-#                   'extra' => {'raw_info' =>
-#                                   { 'location' => 'San Francisco',
-#                                     'gravatar_id' => '123456789'
-#                                   }
-#                   }
-# }
- 
-# OmniAuth.config.add_mock(:Twitter, omniauth_hash)
 
 
 # The settings below are suggested to provide a good initial experience
