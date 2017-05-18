@@ -43,7 +43,6 @@ group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'pry-rails', :group => :development
-  gem 'rack_session_access'
   gem 'launchy'
   gem 'database_cleaner'
   gem 'rspec-rails'
