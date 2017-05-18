@@ -47,6 +47,35 @@ Task/Story: Specific to an individual
 
 ----------
 
+Instructions for setting-up the project
+
+The BingBites Project is hosted at Git Repository for BingBites Organization
+URL : https://github.com/BingBites/bingbites 
+
+Steps:
+  Hoping you have ssh access to the repository, here are the steps to follow.
+  - 1. Clone the repository from the link to clone the project
+  - 2. We have a test database up and running just for reference, but you 
+       would need to set-up a local instance of the database on your system.
+       Well, for this project we have production database to be postgre SQL.
+       Follow instructions on the documentation for postgre sql to set-up
+       the libraries and the depenencies.
+  - 3. We would then need to set up the two env variables, export it
+     - export TWITTER_KEY   -> this is your application auth for twitter app.
+     - export TWITTER_SECRET  -> this would be the secret that for Oauth.
+     - also you would need to update the mapbox api key from the developer docs.
+     Both these keys can be obtained from the twitter developer hub.
+  - 4. Once you have your database and env setup, move ahead to create new categories.
+    As of now this is something that you need to seed into the database, as the 
+    seed file for it has to be worked upon.
+  - 5. Then just do a rails s to start the server and your application is up and running.
+  - 6. Now, login using a twitter account and assign a role from rails console
+       as SUPERDMIN so that you have access to admin features.
+  - 7. Once up, create the Eateries from the admin page and it's done.
+  - Happily ready to serve!
+
+----------
+
 # About Team:
 
 We are a team of 7 developers working towards a CS545 project
