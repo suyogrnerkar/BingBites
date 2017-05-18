@@ -56,6 +56,6 @@ class EateriesController < ApplicationController
   end
 
   def find_eatery
-    @eatery = Eatery.find(params[:id])
+    @eatery = Eatery.friendly.find(params[:id])
   end
 end

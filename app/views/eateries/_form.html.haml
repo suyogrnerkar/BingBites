@@ -8,30 +8,26 @@
         - @eatery.errors.full_messages.each do |message|
           %li= message
   .form-group.field
-    = f.label :name
-    %br/
-    = f.text_field :name, class: 'form-control'
+    = f.text_field :name, class: 'form-control', placeholder: :name
   .form-group.field
-    = f.label :address
-    %br/
-    = f.text_field :address, class: 'form-control'
+    = f.text_field :address, class: 'form-control', placeholder: :address
   .form-group.field
     = f.label :image
-    %br/
     = f.file_field :eatery_img, class: 'form-control'
   .form-group.field
-    = f.label :category
-    %br/
-    = f.select(:category_id, options_for_select(@categories), include_blank: "Select a category")
+    = f.label 'Category of the eatery:'
+    = f.select(:category_id, options_for_select(@categories), { include_blank: "Select a category" }, {class: 'selectpicker'})
   .form-group.info.float-right.h5
     = f.label '#IMP: Click to select Latitude, Longitude from map before or enter values before save.'
     %br/
-  .form-group.actions
-    = f.submit class: 'btn btn-success'
   .form-group
     = f.label :latitude
     = f.text_field :lat, class: 'form-control'
     %br/
     = f.label :longitude
     = f.text_field :long, class: 'form-control'
+  .form-group.actions
+    = button_tag class: 'btn btn-success' do
+      %i.fa.fa-save
+      &nbsp;&nbsp;Save&nbsp;&nbsp;
 

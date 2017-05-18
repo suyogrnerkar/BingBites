@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'omniauth-twitter'
+gem 'friendly_id'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'paperclip', '~> 5.1'

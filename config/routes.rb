@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/tos'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   
 
   resources :eateries do
+    resources :items 
   end
   resources :searches
   # Example of regular route:
