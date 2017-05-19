@@ -6,8 +6,9 @@ class EateriesController < ApplicationController
     if params[:category].blank?
       @eateries = Eatery.search(params[:search])
     else
-      @category = Category.find_by(name: params[:category]).id
-      @eateries = Eatery.where(category_id: @category).order('created_at DESC')
+      category = Category.find_by(name: params[:category]).id
+      eateries = Eatery.search(params[:search])
+      @eateries = eateries.filter(category)
     end
   end
 

@@ -18,7 +18,7 @@
 
       - Category.all.each do |cat|
         %li.sub-menu
-          = link_to eateries_path(category: cat.name), |
+          = link_to eateries_path(search: params[:search], category: cat.name), |
             class: "#{'active' if params[:category] == cat.name }", 
             method: :get do
             %i.fa{ class: "fa-#{FA_ICO_MAP[cat.name]}" }

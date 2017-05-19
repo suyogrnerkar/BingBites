@@ -8,12 +8,14 @@
       #logoBingBites
         = image_tag "pic01.jpg"
       / %span.logoBingBites BingBites
-      - if params[:category] 
-        .h3.text-center.categoryHeader.searchBar
-          = "Looking for #{params[:category].titleize} cuisine today?"
-      - else
-        %input.searchBar{:placeholder => "Start searching the best cafe's & eateries...",   | 
-        :type => "text"}
+      = form_tag(eateries_path, method: "get", id: "search-form") do
+        - if params[:category] 
+          = text_field_tag 'search', nil, placeholder: "Looking for #{params[:category].titleize} cuisine today?", |
+            class: 'searchBar'
+          = hidden_field_tag 'category', params[:category]
+        - else
+          = text_field_tag 'search', nil, placeholder: 'Start searching best hangout places around you...', |
+            class: 'searchBar'
     
       #location.location
         %i.fa.fa-compass
