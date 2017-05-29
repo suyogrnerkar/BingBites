@@ -45,7 +45,10 @@ group :development, :test do
   gem 'pry-rails', :group => :development
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'faker'
+  gem 'guard-rspec'
   gem 'ZenTest'
 end
 
