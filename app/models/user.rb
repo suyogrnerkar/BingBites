@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates_presence_of :name, :provider, :uid, :location, :image_url, :url
+  
   class << self
     def from_omniauth(auth_hash)
       user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])

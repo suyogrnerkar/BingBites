@@ -2,39 +2,98 @@ require 'rails_helper'
 require 'spec_helper'
 
 RSpec.describe User, type: :model do
+  subject { build(:user) }
+
+  it "has a valid factory" do
+    expect(subject).to be_valid
+  end
+
   it "is valid with valid attributes" do
-      expect(User.new).to be_valid
+    expect(subject).to be_valid
   end
+
   it "is not valid without a name" do
-      expect(User.new(name: 'Anything')).to be_valid
+    subject.name = nil
+    expect(subject).to_not be_valid
   end
 
-  it "is not valid without a email" do
-      expect(User.new(email: 'anything@gmail.com')).to be_valid
+  it "is not valid without a provider" do
+    subject.provider = nil
+    expect(subject).to_not be_valid
   end
   
+  it "is not valid without a uid" do
+    subject.uid = nil
+    expect(subject).to_not be_valid
+  end
+
+  it "is not valid without a image_url" do
+    subject.image_url = nil
+    expect(subject).to_not be_valid
+  end
+
+  it "is not valid without a url" do
+    subject.url = nil
+    expect(subject).to_not be_valid
+  end
+
+  it "is not valid without a location" do
+    subject.location = nil
+    expect(subject).to_not be_valid
+  end
+
   it "should be admin user" do
-    user = User.new(:name => "xyz", :email=> 'nil', :role=> "SUPERADMIN")
-    user.save
+    subject.role = "SUPERADMIN"
+    subject.save!
     last_user = User.last
-    expect(user.role).to eq 'SUPERADMIN'
+    expect(subject.role).to eq last_user.role
+  end
+
+  describe :super_admin? do
+    before do 
+      subject.role = 'SUPERADMIN'
+      subject.save!
+    end
+
+    it "should return true for SUPERADMIN" do
+      expect(subject.super_admin?).to be true
+    end
+  end
+
+  describe :eatery_admin? do 
+    before do 
+      subject.role = 'EATERYADMIN'
+      subject.save!
+    end
+
+    it "should return true for EATERYADMIN" do
+      expect(subject.eatery_admin?).to be true
+    end
+  end
+
+  describe ".from_omniauth" do
+    context 'Creating new user' do
+      subject { User.from_omniauth(JSON.parse(Faker::Omniauth.twitter.to_json))}
+      it 'creates a valid user' do
+        expect(subject).to be_valid
+      end
+    end
+  end
+
+  describe :role_type do 
+    context 'Creating new user' do
+      before do
+        subject.role = "SUPERADMIN"
+        subject.save!
+      end
+
+      it "checks the validity of the user role" do
+        expect(subject.send(:role_type, "SUPERADMIN")).to be true
+      end
+    end
   end
 end
 
-describe User do
-  before { @user = User.new(name: "Test User", email: "test@gmail.com", 
-            role: "SUPERADMIN") }
-  subject { @user }
-  
-  it { should respond_to(:name) }
-  it { should respond_to(:email) }
-  it { should respond_to(:role) }
-   
-  describe "when the default params, which are valid, pass" do
-    it { should be_valid }
-  end
-  
-end
 
 
 

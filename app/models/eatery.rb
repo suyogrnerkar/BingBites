@@ -10,6 +10,7 @@ class Eatery < ActiveRecord::Base
   validates_attachment_content_type :eatery_img, content_type: /\Aimage\/.*\z/
   validates_numericality_of :rating, in: 1..5
   validates_numericality_of :price_range, in: 1..5
+  validates_presence_of :name, :address, :lat, :long
 
   def self.search(search)
     if search
