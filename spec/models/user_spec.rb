@@ -90,6 +90,11 @@ RSpec.describe User, type: :model do
       it "checks the validity of the user role" do
         expect(subject.send(:role_type, "SUPERADMIN")).to be true
       end
+
+      it "checks the in-validity of the user role" do
+        expect(subject.send(:role_type, "EATERYADMIN")).to be false
+      end
+
     end
   end
 end

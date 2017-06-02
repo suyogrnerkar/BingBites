@@ -48,27 +48,43 @@ RSpec.describe Eatery, type: :model do
 
   describe ".search" do
     context 'Searching for eateries' do
-      subject { create_list(:eatery, 5)}
+      subject { create_list(:eatery, 5) }
       let(:eatery) { Eatery.search(subject.last.name) }
       it 'returns a valid search' do  
         expect(subject.last.name).to eq eatery.first.name
+      end
+
+    end
+
+    context 'Searching for eateries with no params' do
+      before do
+        create_list(:eatery, 5) 
+      end
+      let(:eateries) { Eatery.search('') }
+      it 'returns all eateries with no parameter passed' do
+        expect(eateries.count).to eq 5
       end
     end
   end
 
   describe ".filters" do
     context 'Filters for eateries' do
-      subject { create_list(:eatery, 5)}
-      let(:eatery) { Eatery.filter("MEXICAN") }
       before do
+        create_list(:eatery, 5)
         Category.create(name: 'MEXICAN')
-        subject.first.category = Category.first
-        subject.first.save!
+        eatery = Eatery.first
+        eatery.category = Category.first
+        eatery.save!
+      end
+      let(:subject) { Eatery.filter(Category.find_by(name: "MEXICAN").id) }
+
+      it 'returns a valid count of filtered results' do  
+        expect(subject.count).to eq 1
       end
 
-      # it 'returns a valid search' do  
-      #   expect(subject.last.name).to eq eatery..name
-      # end
+      it 'returns a valid filtered results' do  
+        expect(subject.first.category).to eq Category.find_by(name: "MEXICAN")
+      end
     end
   end
   

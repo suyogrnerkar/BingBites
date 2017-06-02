@@ -13,7 +13,7 @@ class Eatery < ActiveRecord::Base
   validates_presence_of :name, :address, :lat, :long
 
   def self.search(search)
-    if search
+    if search.present?
       where(["name LIKE ?","%#{search}%"])
     else
       all
