@@ -9,10 +9,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/auth/twitter/callback', to:       'sessions#create'
   delete '/logout',             to:       'sessions#destroy'
-  get '/oauth/authenticate',    to:       'eateries#index'
-  get '/oauth/authenticate/callback', to: 'eateries#index'
   
-
   resources :eateries do
     resources :items 
   end
