@@ -8,12 +8,14 @@ When (/^I click on "(.*?)"$/) do |link|
   click_link(link)
 end
 
-Then(/^I should be signed in$/) do
+Then (/^I should be signed in$/) do
   expect(page).to have_content "LOG OUT"
 end
 
-When(/^press "([^"]*)" button$/) do |button|
+When (/^press "([^"]*)" button$/) do |button|
   visit eateries_path
   click_link_or_button("LOG OUT")
   response.should redirect_to('/')
 end
+
+

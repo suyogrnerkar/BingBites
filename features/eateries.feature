@@ -5,6 +5,7 @@ Feature: EATERIES LISTING PAGE
 
 Background:
   Given we authenticate with "Twitter" mock api
+  And an eatery "Demo Diner" exists in the database
   And I am on the list page
 
 Scenario: Search Bar exists
@@ -30,3 +31,25 @@ Scenario: Drive Thru link exists
 
 Scenario: Location exists
   Then I should see the Location
+
+Scenario: Categories Exist
+  Then I should see the category "MEXICAN"
+  And I should see the category "AMERICAN"
+  And I should see the category "ASIAN"
+  And I should see the category "CONTINENTAL"
+  And I should see the category "ITALIAN"
+  And I should see the category "DAILY SPECIALITY"
+  And I should see the category "ETHNIC"
+  And I should see the category "FAST FOOD"
+  And I should see the category "CASUAL DINING"
+  And I should see the category "FAMILY STYLE"
+  And I should see the category "FINE DINING"
+  And I should see the category "BARBECUE"
+  And I should see the category "CAFE"
+  And I should see the category "PUB"
+
+Scenario: Eateries Exist
+  Then I should see the eatery "Demo Diner"
+  And I should see the address for "Demo Diner"
+
+
