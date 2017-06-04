@@ -23,4 +23,4 @@ Scenario: Social Connect
     
 Scenario: Visiting the Sign In page
     Given I am on the home page
-    Then I should see the twitter button
+    Then I should see the "twitter" button

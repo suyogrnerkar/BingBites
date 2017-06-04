@@ -11,10 +11,9 @@ Feature: Twitter auth
     When I click on "Twitter"
     Then I should be signed in
     
-    
   Scenario: Log Out
     Given I am on the list page
-    When I click on "LOG OUT" button
+    When I click on "LOG OUT"
     Then I should be on the homepage
  
   Scenario: List the menu items

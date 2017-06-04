@@ -32,8 +32,8 @@ end
 
 When (/^I click on "(.*?)"$/) do |link| 
   visit root_path
-  expect(page).to have_link("Twitter")
-  click_link('one')
+  expect(page).to have_link(link)
+  click_link(link)
 end
 
 ### THEN ###
