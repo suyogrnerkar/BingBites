@@ -1,26 +1,31 @@
-Feature: Homepage for BingBites
-  
+Feature: BINGBITES HOMEPAGE
+
   As a user 
-  So that I can get an overview of the product, team members, social connect.
+    So that I can get an overview of the product, team members, social connect.
 
 Scenario: Go to HomePage
-   Given I am on the home page
-   When I click on the BingBites
-   Then I should be on the home page
-   And I should see the Welcome message
+  Given I am on the home page
+  When I click on the BingBites
+  Then I should be on the home page
+  And I should see the Welcome message
 
 Scenario: Product description
-   Given I am on the home page
-   Then I should see the product info
+  Given I am on the home page
+  Then I should see the product info
 
 Scenario: Team members
-   Given I am on the home page
-   Then I should see The Team
+  Given I am on the home page
+  Then I should see The Team
 
 Scenario: Social Connect
-   Given I am on the home page
-   Then I should see the social connect
+  Given I am on the home page
+  Then I should see the social connect
     
 Scenario: Visiting the Sign In page
-    Given I am on the home page
-    Then I should see the "twitter" button
+  Given I am on the home page
+  Then I should see the "twitter" button
+
+Scenario: Signing in with Twitter
+  Given I am on the homepage
+  When I click on "Twitter"
+  Then I should be signed in

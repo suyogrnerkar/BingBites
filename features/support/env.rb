@@ -6,9 +6,19 @@
 
 require 'cucumber/rails'
 require 'capybara/rails'
-require 'capybara/cucumber'
-require 'capybara/session'
 
+OmniAuth.config.test_mode = true
+
+OmniAuth.config.mock_auth[:twitter] = {
+  'uid' => '1337',
+  'provider' => 'twitter',
+  'info' => {
+  'name' => 'hi',
+  'location' => 'Yoooo',
+  'urls' => {'Twitter' => 'xxxx:///xxx'},
+  'image' => 'http://www.jejejr.com/image/kk.jpg'
+  }
+}
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
