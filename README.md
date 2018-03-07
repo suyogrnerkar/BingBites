@@ -73,20 +73,5 @@ Thank you for your interest to be a part of this open source initiative.
     Now, this is something that goolge enforces when you host an application
     on a domain. Without a ssl secured domain, it wouldn't allow the client browser
     to allow the geolocate javascript to work as intended. So deploy the app over
-    ssl and it would eork fine.
-
-
-# About Team:
-
-We are a team of 7 developers working towards a CS545 project
-on building a rails application for Listing of Food and Events.
-
-## Members of the team are:
-- Suyog Nerkar
-- Vaibhav Acharya
-- Debashish Majumdar
-- Kiran Kadam
-- Pranav Garje
-- Abhijit Bhandarkar
-- Uddhav Mhatre
+    ssl and it would work fine.
 
